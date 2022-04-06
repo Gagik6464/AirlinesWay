@@ -1,0 +1,15 @@
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Application\bin\Debug\net6.0\AirlinesWay.Application.deps.json
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Application\bin\Debug\net6.0\AirlinesWay.Application.dll
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Application\bin\Debug\net6.0\AirlinesWay.Application.pdb
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Application\bin\Debug\net6.0\AirlinesWay.Domain.dll
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Application\bin\Debug\net6.0\AirlinesWay.Domain.pdb
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Application\obj\Debug\net6.0\AirlinesWay.Application.csproj.AssemblyReference.cache
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Application\obj\Debug\net6.0\AirlinesWay.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Application\obj\Debug\net6.0\AirlinesWay.Application.AssemblyInfoInputs.cache
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Application\obj\Debug\net6.0\AirlinesWay.Application.AssemblyInfo.cs
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Application\obj\Debug\net6.0\AirlinesWay.Application.csproj.CoreCompileInputs.cache
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Application\obj\Debug\net6.0\AirlinesWay.Application.csproj.CopyComplete
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Application\obj\Debug\net6.0\AirlinesWay.Application.dll
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Application\obj\Debug\net6.0\refint\AirlinesWay.Application.dll
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Application\obj\Debug\net6.0\AirlinesWay.Application.pdb
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Application\obj\Debug\net6.0\ref\AirlinesWay.Application.dll

@@ -1,0 +1,212 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Api\\AirlinesWay.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Api\\AirlinesWay.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Api\\AirlinesWay.Api.csproj",
+        "projectName": "AirlinesWay.Api",
+        "projectPath": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Api\\AirlinesWay.Api.csproj",
+        "packagesPath": "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gagik.vardanyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://cargoodev.pkgs.visualstudio.com/Cargoo_V2/_packaging/Cargoo_Utils/nuget/v3/index.json": {},
+          "https://cargoodev.pkgs.visualstudio.com/Cargoo_V2/_packaging/Cargoo_WorkflowRules/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Application\\AirlinesWay.Application.csproj": {
+                "projectPath": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Application\\AirlinesWay.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Application\\AirlinesWay.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Application\\AirlinesWay.Application.csproj",
+        "projectName": "AirlinesWay.Application",
+        "projectPath": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Application\\AirlinesWay.Application.csproj",
+        "packagesPath": "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gagik.vardanyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://cargoodev.pkgs.visualstudio.com/Cargoo_V2/_packaging/Cargoo_Utils/nuget/v3/index.json": {},
+          "https://cargoodev.pkgs.visualstudio.com/Cargoo_V2/_packaging/Cargoo_WorkflowRules/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Domain\\AirlinesWay.Domain.csproj": {
+                "projectPath": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Domain\\AirlinesWay.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Domain\\AirlinesWay.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Domain\\AirlinesWay.Domain.csproj",
+        "projectName": "AirlinesWay.Domain",
+        "projectPath": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Domain\\AirlinesWay.Domain.csproj",
+        "packagesPath": "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gagik.vardanyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://cargoodev.pkgs.visualstudio.com/Cargoo_V2/_packaging/Cargoo_Utils/nuget/v3/index.json": {},
+          "https://cargoodev.pkgs.visualstudio.com/Cargoo_V2/_packaging/Cargoo_WorkflowRules/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

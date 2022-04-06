@@ -1,6 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlinesWay", "AirlinesWay\AirlinesWay.csproj", "{7A158DED-3574-45CA-A9B5-2B33FB99F84C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlinesWay.Api", "AirlinesWay.Api\AirlinesWay.Api.csproj", "{7A158DED-3574-45CA-A9B5-2B33FB99F84C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlinesWay.Application", "AirlinesWay.Application\AirlinesWay.Application.csproj", "{C47A8F47-F892-4FC9-A611-D4F434384C71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlinesWay.Domain", "AirlinesWay.Domain\AirlinesWay.Domain.csproj", "{D96CB9F8-0362-49D3-B2B5-203B870727A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +16,13 @@ Global
 		{7A158DED-3574-45CA-A9B5-2B33FB99F84C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A158DED-3574-45CA-A9B5-2B33FB99F84C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A158DED-3574-45CA-A9B5-2B33FB99F84C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C47A8F47-F892-4FC9-A611-D4F434384C71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C47A8F47-F892-4FC9-A611-D4F434384C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C47A8F47-F892-4FC9-A611-D4F434384C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C47A8F47-F892-4FC9-A611-D4F434384C71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D96CB9F8-0362-49D3-B2B5-203B870727A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D96CB9F8-0362-49D3-B2B5-203B870727A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D96CB9F8-0362-49D3-B2B5-203B870727A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D96CB9F8-0362-49D3-B2B5-203B870727A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
