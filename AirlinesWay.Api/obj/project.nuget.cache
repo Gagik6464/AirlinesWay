@@ -1,15 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "qoCMVBM4JbYAJWhx/V1fGwq3y0x+rfx/z9XS9atz3Z6+GYtVlcEhmU2uZRotmBoWv2lj2pn7tpmnxaHussSKgQ==",
+  "dgSpecHash": "+nHmQdwVDIeiYNUUNR4UZPqvpmzYhYduqEUTSp4tF6zarbCkuu7VKujdajWzhTCrb/VI2z0VbjkwbhX9Eevwxw==",
   "success": true,
   "projectFilePath": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Api\\AirlinesWay.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",
     "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.3\\microsoft.entityframeworkcore.abstractions.6.0.3.nupkg.sha512",
     "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.3\\microsoft.entityframeworkcore.analyzers.6.0.3.nupkg.sha512",
+    "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.3\\microsoft.entityframeworkcore.design.6.0.3.nupkg.sha512",
     "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.3\\microsoft.entityframeworkcore.relational.6.0.3.nupkg.sha512",
     "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.3\\microsoft.entityframeworkcore.sqlserver.6.0.3.nupkg.sha512",
     "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",

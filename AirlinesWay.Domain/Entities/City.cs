@@ -2,10 +2,10 @@ namespace AirlinesWay.Domain;
 
 public class City
 {
-    public City(string name, int countryId, Country country)
+    public City(string name, int countryId)
     {
         Name = name;
-        Country = country;
+        CountryId = countryId;
     }
     
     public int Id { get; }

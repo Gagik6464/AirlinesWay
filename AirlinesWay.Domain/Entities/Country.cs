@@ -10,7 +10,7 @@ public class Country
     
     public int Id { get;}
     public string Name { get; set; }
-    public string Code { get; }
+    public string Code { get; set; }
 
     public ICollection<City> Cities { get; set; }
 }

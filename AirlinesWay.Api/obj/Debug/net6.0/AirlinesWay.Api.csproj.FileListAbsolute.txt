@@ -61,3 +61,5 @@ C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net
 C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\AirlinesWay.Api.pdb
 C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\AirlinesWay.Api.genruntimeconfig.cache
 C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\ref\AirlinesWay.Api.dll
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\bin\Debug\net6.0\Humanizer.dll
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll

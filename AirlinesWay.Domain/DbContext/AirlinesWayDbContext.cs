@@ -21,20 +21,45 @@ public class AirlinesWayDbContext : Microsoft.EntityFrameworkCore.DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Flight>()
-            .HasOne(x => x.Airline)
+        modelBuilder.Entity<Flight>(entity =>
+        {
+            entity.HasKey(x => x.Id);
+
+            entity.HasOne(x => x.Airline)
             .WithMany(x => x.Flights)
             .HasForeignKey(x => x.AirlineId)
             .OnDelete(DeleteBehavior.NoAction);
+        });
 
-        modelBuilder.Entity<City>()
-            .HasOne(x => x.Country)
+        modelBuilder.Entity<Airline>(entity =>
+        {
+            entity.HasKey(x => x.Id);
+        });
+
+        modelBuilder.Entity<Country>(entity =>
+        {
+            entity.HasKey(x => x.Id);
+        });
+
+
+        modelBuilder.Entity<City>(entity =>
+        {
+            entity.HasKey(x => x.Id);
+
+            entity.HasOne(x => x.Country)
             .WithMany(x => x.Cities)
             .HasForeignKey(x => x.CountryId)
             .OnDelete(DeleteBehavior.Cascade);
-        
-        modelBuilder.Entity<AirCompany>()
-            .HasMany(x => x.Airlines)
+        });
+            
+
+        modelBuilder.Entity<AirCompany>(entity =>
+        {
+            entity.HasKey(x => x.Id);
+
+            entity.HasMany(x => x.Airlines)
             .WithMany(y => y.AirCompanies);
+        });
+            
     }
 }
