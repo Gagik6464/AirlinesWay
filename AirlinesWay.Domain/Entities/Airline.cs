@@ -14,13 +14,8 @@ public class Airline
     public int Distance { get; set; }
 
     public int StartedCityId { get; set; }
-    public City StartedCity { get; set; }
-    
     public int? IntermediateCityId { get; set; }
-    public City? IntermediateCity { get; set; }
-
     public int FinishedCityId { get; set; }
-    public City FinishedCity { get; set; }
 
     public ICollection<AirCompany> AirCompanies { get; set; }
     public ICollection<Flight> Flights { get; set; }

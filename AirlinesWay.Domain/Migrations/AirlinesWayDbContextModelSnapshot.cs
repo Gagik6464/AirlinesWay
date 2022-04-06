@@ -80,12 +80,6 @@ namespace AirlinesWay.Domain.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FinishedCityId");
-
-                    b.HasIndex("IntermediateCityId");
-
-                    b.HasIndex("StartedCityId");
-
                     b.ToTable("Airlines");
                 });
 
@@ -183,31 +177,6 @@ namespace AirlinesWay.Domain.Migrations
                         .HasForeignKey("AirlinesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("AirlinesWay.Domain.Airline", b =>
-                {
-                    b.HasOne("AirlinesWay.Domain.City", "FinishedCity")
-                        .WithMany()
-                        .HasForeignKey("FinishedCityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("AirlinesWay.Domain.City", "IntermediateCity")
-                        .WithMany()
-                        .HasForeignKey("IntermediateCityId");
-
-                    b.HasOne("AirlinesWay.Domain.City", "StartedCity")
-                        .WithMany()
-                        .HasForeignKey("StartedCityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("FinishedCity");
-
-                    b.Navigation("IntermediateCity");
-
-                    b.Navigation("StartedCity");
                 });
 
             modelBuilder.Entity("AirlinesWay.Domain.City", b =>
