@@ -1,3 +1,5 @@
+using AirlinesWay.Application;
+using AirlinesWay.Application.Abstraction;
 using AirlinesWay.Domain.DbContext;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +12,9 @@ var connectionString = builder.Configuration.GetConnectionString("AirlinesWay");
 
 builder.Services.AddDbContext<AirlinesWayDbContext>(options =>
     options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<IAirlineService, AirlineService>();
+builder.Services.AddScoped<IFlightService, FlightService>();
 
 var app = builder.Build();
 

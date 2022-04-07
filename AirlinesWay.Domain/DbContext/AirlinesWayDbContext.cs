@@ -34,21 +34,6 @@ public class AirlinesWayDbContext : Microsoft.EntityFrameworkCore.DbContext
         modelBuilder.Entity<Airline>(entity =>
         {
             entity.HasKey(x => x.Id);
-            
-            entity.HasOne(x => x.StartedCity)
-                .WithMany(x => x.Airlines)
-                .HasForeignKey(x => x.StartedCityId)
-                .OnDelete(DeleteBehavior.NoAction);
-                
-            entity.HasOne(x => x.IntermediateCity)
-                .WithMany(x => x.Airlines)
-                .HasForeignKey(x => x.IntermediateCityId)
-                .OnDelete(DeleteBehavior.NoAction);
-            
-            entity.HasOne(x => x.FinishedCity)
-                .WithMany(x => x.Airlines)
-                .HasForeignKey(x => x.FinishedCityId)
-                .OnDelete(DeleteBehavior.NoAction);
         });
 
         modelBuilder.Entity<Country>(entity =>

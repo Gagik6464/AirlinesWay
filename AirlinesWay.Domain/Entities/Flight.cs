@@ -22,6 +22,9 @@ public class Flight
     public DateTime TimeDuration { get; set; }
     public decimal Price { get; set; }
 
+    public int AirCompanyId { get; set; }
+    public AirCompany AirCompany { get; set; }
+
     public int AirlineId { get; set; }
     public Airline Airline { get; set; }
 }
