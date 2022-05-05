@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
 var connectionString = builder.Configuration.GetConnectionString("AirlinesWay");
 
@@ -15,8 +16,25 @@ builder.Services.AddDbContext<AirlinesWayDbContext>(options =>
 
 builder.Services.AddScoped<IAirlineService, AirlineService>();
 builder.Services.AddScoped<IFlightService, FlightService>();
+builder.Services.AddScoped<IAirCompanyService, AirCompanyService>();
+builder.Services.AddScoped<ICityService, CitiesService>();
 
 var app = builder.Build();
+
+using (var serviceProvider = builder.Services.BuildServiceProvider())
+{
+    try
+    {
+        var context = serviceProvider.GetRequiredService<AirlinesWayDbContext>();
+        DbInitializer.Initialize(context);
+    }
+    catch (Exception ex)
+    {
+        var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "An error occurred creating the DB");
+    }
+    
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -33,8 +51,10 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.MapRazorPages();
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Flights}/{action=Index}/{id?}");
 
 app.Run();

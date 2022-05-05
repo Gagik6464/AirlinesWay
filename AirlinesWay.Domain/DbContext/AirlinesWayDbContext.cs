@@ -5,13 +5,10 @@ namespace AirlinesWay.Domain.DbContext;
 public class AirlinesWayDbContext : Microsoft.EntityFrameworkCore.DbContext
 {
     public AirlinesWayDbContext()
-    {
-        
-    }
+    { }
     
     public AirlinesWayDbContext(DbContextOptions<AirlinesWayDbContext> options) : base(options)
-    {
-    }
+    { }
     
     public DbSet<AirCompany> AirCompanies { get; set; }
     public DbSet<Airline> Airlines { get; set; }

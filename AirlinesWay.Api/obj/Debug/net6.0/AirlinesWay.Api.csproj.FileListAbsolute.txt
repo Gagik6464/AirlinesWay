@@ -52,9 +52,7 @@ C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net
 C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\AirlinesWay.Api.RazorAssemblyInfo.cs
 C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\scopedcss\bundle\AirlinesWay.Api.styles.css
-C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\scopedcss\projectbundle\AirlinesWay.Api.bundle.scp.css
 C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\AirlinesWay.Api.csproj.CopyComplete
 C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\AirlinesWay.Api.dll
 C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\refint\AirlinesWay.Api.dll

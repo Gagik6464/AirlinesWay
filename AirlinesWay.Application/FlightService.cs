@@ -57,8 +57,62 @@ public class FlightService : IFlightService
         return response;
     }
 
-    public Task<FlightResponseModel> GetOptimizeFlight(FlightOptimizeWayTypes optimizeType)
+    public FlightResponseModel GetOptimizeFlight(FlightGetOptimizeWayModel request)
     {
-        return null!;
+        var flight = request.FilterType switch
+        {
+            (int) FlightOptimizeWayTypes.ByValue =>
+        
+            _dbContext.Flights
+                .Include(x => x.Airline)
+                .Include(x => x.AirCompany).Where(x => x.Airline.StartedCityId == request.StartCityId &&
+                                                       x.Airline.FinishedCityId == request.FinishedCityId).MinBy(x => x.Price)
+        ,
+            (int) FlightOptimizeWayTypes.ByRoadLength =>  _dbContext.Flights
+                .Include(x => x.Airline)
+                .Include(x => x.AirCompany).Where(x => x.Airline.StartedCityId == request.StartCityId &&
+                                                       x.Airline.FinishedCityId == request.FinishedCityId).MinBy(x => x.Airline.Distance),
+            
+            (int) FlightOptimizeWayTypes.ByTimeDuration => _dbContext.Flights
+            .Include(x => x.Airline)
+            .Include(x => x.AirCompany).Where(x => x.Airline.StartedCityId == request.StartCityId &&
+                                                   x.Airline.FinishedCityId == request.FinishedCityId).MinBy(x => x.TimeDuration),
+            _ => throw new ArgumentOutOfRangeException()
+        };
+
+        if (flight is null)
+            return new FlightResponseModel();
+
+        var response =  new FlightResponseModel
+        {
+            Name = flight.Name,
+            Code = flight.Code,
+            StartDateTime = flight.StartDateTime,
+            ExpectedFinishDateTime = flight.ExpectedFinishDateTime,
+            TimeDuration = flight.TimeDuration,
+            Price = flight.Price,
+            AirCompanyName = flight.AirCompany.Name,
+
+            AirlineResponse = new()
+            {
+                Distance = flight.Airline.Distance,
+                Id = flight.Airline.Id,
+                Name = flight.Airline.Name,
+                FinishedCityId = flight.Airline.FinishedCityId,
+                IntermediateCityId = flight.Airline.IntermediateCityId,
+                StartedCityId = flight.Airline.StartedCityId,
+            },
+        };
+        
+        response.AirlineResponse.StartedCityName =
+            _dbContext.Cities.First(x => x.Id == response.AirlineResponse.StartedCityId).Name;
+        
+        response.AirlineResponse.IntermediateCityName =
+            _dbContext.Cities.First(x => x.Id == response.AirlineResponse.IntermediateCityId)?.Name;
+        
+        response.AirlineResponse.FinishedCityName =
+            _dbContext.Cities.First(x => x.Id == response.AirlineResponse.FinishedCityId).Name;
+
+        return response;
     }
 }

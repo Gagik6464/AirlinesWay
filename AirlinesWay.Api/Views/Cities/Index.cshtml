@@ -1,0 +1,11 @@
+@using AirlinesWay.Domain
+@model IEnumerable<SelectListItem>
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h4>Select Started City</h4>
+@Html.DropDownList("Select City",Model)
+
+

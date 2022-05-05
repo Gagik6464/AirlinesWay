@@ -1884,9 +1884,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://cargoodev.pkgs.visualstudio.com/Cargoo_V2/_packaging/Cargoo_Utils/nuget/v3/index.json": {},
-        "https://cargoodev.pkgs.visualstudio.com/Cargoo_V2/_packaging/Cargoo_WorkflowRules/nuget/v3/index.json": {}
+        "https://cargoodev.pkgs.visualstudio.com/Cargoo_V2/_packaging/Cargoo_Utils/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {

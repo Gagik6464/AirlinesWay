@@ -1,10 +1,9 @@
 using AirlinesWay.Application.Models;
-using AirlinesWay.Domain.Enums;
 
 namespace AirlinesWay.Application.Abstraction;
 
 public interface IFlightService
 {
-    Task<FlightResponseModel> GetOptimizeFlight(FlightOptimizeWayTypes optimizeType);
+    FlightResponseModel GetOptimizeFlight(FlightGetOptimizeWayModel request);
     Task<IEnumerable<FlightResponseModel>> GetAllFlights();
 }
