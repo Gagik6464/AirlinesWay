@@ -6,4 +6,5 @@ public interface IFlightService
 {
     FlightResponseModel GetOptimizeFlight(FlightGetOptimizeWayModel request);
     Task<IEnumerable<FlightResponseModel>> GetAllFlights();
+    Task<bool> AddFlight(FlightRequestModel request);
 }

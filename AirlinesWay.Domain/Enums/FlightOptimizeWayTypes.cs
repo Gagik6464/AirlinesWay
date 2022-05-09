@@ -2,7 +2,7 @@ namespace AirlinesWay.Domain.Enums;
 
 public enum FlightOptimizeWayTypes
 {
-    ByValue,
+    ByValue = 1,
     ByTimeDuration,
     ByRoadLength
 }

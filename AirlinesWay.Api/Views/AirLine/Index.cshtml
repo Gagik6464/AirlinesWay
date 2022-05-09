@@ -1,7 +1,20 @@
-@model dynamic
+@model AirlinesWay.Application.Models.AirLineRequestModel
 
 @{
     ViewBag.Title = "title";
 }
 
-<h2>title</h2>
+@using (Html.BeginForm("AddAirline", "AirLine", FormMethod.Post, new {id="frmRegister"})) {
+
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+
+    @Html.DropDownListFor(m => m.StartedCityId, Model.Cities, "Select Started City")
+    @Html.DropDownListFor(m => m.IntermediateCityId, Model.Cities, "Select Intermediate City")
+    @Html.DropDownListFor(m => m.FinishedCityId, Model.Cities, "Select Finished City")
+
+    @Html.LabelFor(m => m.Distance)
+    @Html.TextBoxFor(m => m.Distance)
+
+    <input type='Submit' value='Register' id= "btnRegister" />
+}

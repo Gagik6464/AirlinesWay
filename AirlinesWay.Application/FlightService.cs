@@ -1,5 +1,6 @@
 using AirlinesWay.Application.Abstraction;
 using AirlinesWay.Application.Models;
+using AirlinesWay.Domain;
 using AirlinesWay.Domain.DbContext;
 using AirlinesWay.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
@@ -57,26 +58,22 @@ public class FlightService : IFlightService
         return response;
     }
 
-    public FlightResponseModel GetOptimizeFlight(FlightGetOptimizeWayModel request)
-    {
+    public FlightResponseModel GetOptimizeFlight(FlightGetOptimizeWayModel request) {
+        
+        var flights = _dbContext.Flights
+            .Include(x => x.Airline)
+            .Include(x => x.AirCompany).Where(x => x.Airline.StartedCityId == request.StartCityId &&
+                                                   x.Airline.FinishedCityId == request.FinishedCityId).ToList();
+        
         var flight = request.FilterType switch
         {
             (int) FlightOptimizeWayTypes.ByValue =>
         
-            _dbContext.Flights
-                .Include(x => x.Airline)
-                .Include(x => x.AirCompany).Where(x => x.Airline.StartedCityId == request.StartCityId &&
-                                                       x.Airline.FinishedCityId == request.FinishedCityId).MinBy(x => x.Price)
+                flights.MinBy(x => x.Price)
         ,
-            (int) FlightOptimizeWayTypes.ByRoadLength =>  _dbContext.Flights
-                .Include(x => x.Airline)
-                .Include(x => x.AirCompany).Where(x => x.Airline.StartedCityId == request.StartCityId &&
-                                                       x.Airline.FinishedCityId == request.FinishedCityId).MinBy(x => x.Airline.Distance),
+            (int) FlightOptimizeWayTypes.ByRoadLength =>  flights.MinBy(x => x.Airline.Distance),
             
-            (int) FlightOptimizeWayTypes.ByTimeDuration => _dbContext.Flights
-            .Include(x => x.Airline)
-            .Include(x => x.AirCompany).Where(x => x.Airline.StartedCityId == request.StartCityId &&
-                                                   x.Airline.FinishedCityId == request.FinishedCityId).MinBy(x => x.TimeDuration),
+            (int) FlightOptimizeWayTypes.ByTimeDuration => flights.MinBy(x => x.TimeDuration),
             _ => throw new ArgumentOutOfRangeException()
         };
 
@@ -114,5 +111,15 @@ public class FlightService : IFlightService
             _dbContext.Cities.First(x => x.Id == response.AirlineResponse.FinishedCityId).Name;
 
         return response;
+    }
+    
+    public async Task<bool> AddFlight(FlightRequestModel request) {
+
+        var requestedAirline = new Flight(request.Name, request.Code,request.StartDateTime, request.ExpectedFinishDateTime,
+            request.Price, request.AirlineId, request.TimeDuration, request.AirCompanyId) ;
+
+        await _dbContext.AddAsync(requestedAirline);
+
+        return await _dbContext.SaveChangesAsync() > 0;
     }
 }

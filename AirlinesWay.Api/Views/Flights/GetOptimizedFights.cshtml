@@ -1,0 +1,38 @@
+@model AirlinesWay.Application.Models.FlightResponseModel
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Optimized Flight</h2>
+
+@if (@Model.Id > 0) {
+    <table>  
+        <tr>  
+            <th>Id</th> 
+            <th>Name</th>  
+            <th>Code</th>  
+            <th>Price</th>  
+            <th>AirlineResponse</th> 
+            <th>AirCompanyName</th> 
+            <th>TimeDuration</th> 
+            <th>StartDateTime</th> 
+            <th>ExpectedFinishDateTime</th> 
+        </tr>  
+        <tr>  
+            <td>@Model.Id</td>  
+            <td>@Model.Name</td>  
+            <td>@Model.Code</td>  
+            <td>@Model.Price</td>  
+            <td>@Model.AirlineResponse</td>  
+            <td>@Model.AirCompanyName</td>  
+            <td>@Model.TimeDuration</td>  
+            <td>@Model.StartDateTime</td>  
+            <td>@Model.ExpectedFinishDateTime</td>  
+        </tr>  
+    </table> 
+}
+else {
+    <h3>Flights not found by requested cities</h3>
+}
+

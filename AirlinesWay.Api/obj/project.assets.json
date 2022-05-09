@@ -1860,38 +1860,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\sogho\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Api\\AirlinesWay.Api.csproj",
+      "projectUniqueName": "C:\\Users\\sogho\\RiderProjects\\AirlinesWay\\AirlinesWay.Api\\AirlinesWay.Api.csproj",
       "projectName": "AirlinesWay.Api",
-      "projectPath": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Api\\AirlinesWay.Api.csproj",
-      "packagesPath": "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Api\\obj\\",
+      "projectPath": "C:\\Users\\sogho\\RiderProjects\\AirlinesWay\\AirlinesWay.Api\\AirlinesWay.Api.csproj",
+      "packagesPath": "C:\\Users\\sogho\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sogho\\RiderProjects\\AirlinesWay\\AirlinesWay.Api\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\gagik.vardanyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\sogho\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://cargoodev.pkgs.visualstudio.com/Cargoo_V2/_packaging/Cargoo_Utils/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Application\\AirlinesWay.Application.csproj": {
-              "projectPath": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Application\\AirlinesWay.Application.csproj"
+            "C:\\Users\\sogho\\RiderProjects\\AirlinesWay\\AirlinesWay.Application\\AirlinesWay.Application.csproj": {
+              "projectPath": "C:\\Users\\sogho\\RiderProjects\\AirlinesWay\\AirlinesWay.Application\\AirlinesWay.Application.csproj"
             }
           }
         }
@@ -1931,7 +1925,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

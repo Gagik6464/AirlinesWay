@@ -1,11 +1,48 @@
-@using AirlinesWay.Domain
-@model IEnumerable<SelectListItem>
+@model AirlinesWay.Application.Models.CitiesResponseModel
+@* @model AirlinesWay.Application.Models.FlightGetOptimizeWayModel *@
 
 @{
     ViewBag.Title = "title";
 }
 
-<h4>Select Started City</h4>
-@Html.DropDownList("Select City",Model)
+@using (Html.BeginForm("GetOptimizedFights", "Flights", FormMethod.Post))
+{
+    <div class="form-group">
+        <label class="control-label">Select Started City</label>
+        @Html.DropDownListFor(m => m.StartedCityId,Model.Cities)
+
+        <label class="control-label">Select Finished City</label>
+                @Html.DropDownListFor(m => m.FinishedCityId, Model.Cities)
+        
+        <label class="control-label">Which method do you select for optimize rows</label>
+                        @Html.DropDownListFor(m => m.FilterType, new SelectListItem[]
+    {
+        new ()
+        {
+            Text = "By Value",
+            Value = "1"
+        },
+        new ()
+        {
+            Text = "By Time Duration",
+            Value = "2"
+        },
+        new ()
+        {
+            Text = "By Road Length",
+            Value = "3"
+        }
+    })
+        <text> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</text>
+            <td>@Html.ActionLink("Please Add AirLines", "Index", "AirLine")</td>
+
+    <input type="button" value="Please Add AirLines" onclick="window.location.href='<@Url.Action("Index","AirLine") %>';" />
+    <input type="button" value="Please Add Flights" onclick="window.location.href='<@Url.Action("AddFlight","Flights") %>';" />
+    </div>
+
+    <button type="submit">Find</button>
+}
+
+
 
 

@@ -10,4 +10,10 @@
       <ProjectReference Include="..\AirlinesWay.Domain\AirlinesWay.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="Microsoft.AspNetCore.Mvc.ViewFeatures, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+        <HintPath>..\..\..\.dotnet\packs\Microsoft.AspNetCore.App.Ref\6.0.4\ref\net6.0\Microsoft.AspNetCore.Mvc.ViewFeatures.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>

@@ -19,6 +19,8 @@ builder.Services.AddScoped<IFlightService, FlightService>();
 builder.Services.AddScoped<IAirCompanyService, AirCompanyService>();
 builder.Services.AddScoped<ICityService, CitiesService>();
 
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>(); 
+
 var app = builder.Build();
 
 using (var serviceProvider = builder.Services.BuildServiceProvider())
@@ -55,6 +57,6 @@ app.MapRazorPages();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Flights}/{action=Index}/{id?}");
+    pattern: "{controller=Cities}/{action=Index}/{id?}");
 
 app.Run();

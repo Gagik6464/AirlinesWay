@@ -1,5 +1,6 @@
 using AirlinesWay.Application.Abstraction;
 using AirlinesWay.Application.Models;
+using AirlinesWay.Domain;
 using AirlinesWay.Domain.DbContext;
 using Microsoft.EntityFrameworkCore;
 
@@ -39,5 +40,17 @@ public class AirlineService : IAirlineService
         }
 
         return response;
+    }
+
+    public async Task<bool> AddAirLine(AirLineRequestModel request) {
+
+        var requestedAirline = new Airline(request.Name, request.StartedCityId, request.FinishedCityId) {
+            Distance = request.Distance,
+            IntermediateCityId = request.IntermediateCityId,
+        };
+
+        await _dbContext.AddAsync(requestedAirline);
+
+        return await _dbContext.SaveChangesAsync() > 0;
     }
 }
