@@ -4,9 +4,13 @@
     ViewBag.Title = "title flights";
 }
 
-@using (Html.BeginForm("AddAirline", "AirLine", FormMethod.Post, new {id="frmRegister"})) {
+@using (Html.BeginForm("AddFlight", "Flights", FormMethod.Post, new {id="frmRegister"})) {
 
     @Html.DropDownListFor(m => m.AirCompanyId, Model.AirCompanies, "Select AirCompany")
+
+    @Html.DropDownListFor(m => m.AirlineId, Model.AirLines.Select(x => new SelectListItem() {
+        Text = x.Name,
+        Value = x.Id.ToString()}))
 
     @Html.LabelFor(m => m.Name)
     @Html.TextBoxFor(m => m.Name)

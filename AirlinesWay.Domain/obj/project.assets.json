@@ -1860,24 +1860,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\sogho\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Domain\\AirlinesWay.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\sogho\\RiderProjects\\AirlinesWay\\AirlinesWay.Domain\\AirlinesWay.Domain.csproj",
       "projectName": "AirlinesWay.Domain",
-      "projectPath": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Domain\\AirlinesWay.Domain.csproj",
-      "packagesPath": "C:\\Users\\gagik.vardanyan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gagik.vardanyan\\RiderProjects\\AirlinesWay\\AirlinesWay.Domain\\obj\\",
+      "projectPath": "C:\\Users\\sogho\\RiderProjects\\AirlinesWay\\AirlinesWay.Domain\\AirlinesWay.Domain.csproj",
+      "packagesPath": "C:\\Users\\sogho\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sogho\\RiderProjects\\AirlinesWay\\AirlinesWay.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\gagik.vardanyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\sogho\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1931,7 +1926,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

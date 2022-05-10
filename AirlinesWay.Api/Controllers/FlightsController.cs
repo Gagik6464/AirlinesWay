@@ -22,11 +22,15 @@ public class FlightsController : Controller {
         var aircompanies = await _airCompanyService.GetAllAirCompanies();
         var airLines = await _airlineService.GetAllAirLines();
 
-        var selectAirCompaniesList = aircompanies.Select(airCompany => new SelectListItem() {Text = airCompany.Name, Value = airCompany.Id.ToString()}).ToList();
+        List<SelectListItem> selectAirCompaniesList;
+
+        selectAirCompaniesList = airLines.Any() ? aircompanies.
+            Select(airCompany => new SelectListItem() {Text = airCompany.Name, Value = airCompany.Id.ToString()}).ToList() : new List<SelectListItem>();
 
         return View(new FlightRequestModel()
         {
-            AirCompanies = selectAirCompaniesList
+            AirCompanies = selectAirCompaniesList,
+            AirLines = airLines
         });
     }
 

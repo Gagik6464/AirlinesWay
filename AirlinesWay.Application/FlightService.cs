@@ -82,6 +82,7 @@ public class FlightService : IFlightService
 
         var response =  new FlightResponseModel
         {
+            Id = flight.Id,
             Name = flight.Name,
             Code = flight.Code,
             StartDateTime = flight.StartDateTime,
@@ -105,7 +106,7 @@ public class FlightService : IFlightService
             _dbContext.Cities.First(x => x.Id == response.AirlineResponse.StartedCityId).Name;
         
         response.AirlineResponse.IntermediateCityName =
-            _dbContext.Cities.First(x => x.Id == response.AirlineResponse.IntermediateCityId)?.Name;
+            _dbContext.Cities.FirstOrDefault(x => x.Id == response.AirlineResponse.IntermediateCityId)?.Name;
         
         response.AirlineResponse.FinishedCityName =
             _dbContext.Cities.First(x => x.Id == response.AirlineResponse.FinishedCityId).Name;
@@ -118,7 +119,7 @@ public class FlightService : IFlightService
         var requestedAirline = new Flight(request.Name, request.Code,request.StartDateTime, request.ExpectedFinishDateTime,
             request.Price, request.AirlineId, request.TimeDuration, request.AirCompanyId) ;
 
-        await _dbContext.AddAsync(requestedAirline);
+        await _dbContext.Flights.AddAsync(requestedAirline);
 
         return await _dbContext.SaveChangesAsync() > 0;
     }

@@ -8,5 +8,5 @@ public class AirCompany
     }
     public int Id { get;}
     public string Name { get; set; }
-    public ICollection<Airline> Airlines { get; set; }
+    public IEnumerable<Airline> Airlines { get; set; }
 }

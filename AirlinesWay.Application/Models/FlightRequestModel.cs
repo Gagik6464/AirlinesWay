@@ -1,3 +1,4 @@
+using AirlinesWay.Domain;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AirlinesWay.Application.Models; 
@@ -14,4 +15,5 @@ public class FlightRequestModel {
 	public int AirlineId { get; set; }
 
 	public IEnumerable<SelectListItem> AirCompanies { get; set; }
+	public IEnumerable<AirlineResponseModel> AirLines { get; set; }
 }

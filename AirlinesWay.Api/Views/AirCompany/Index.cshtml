@@ -1,7 +1,15 @@
-@* @model dynamic *@
+@model AirlinesWay.Application.Models.AirCompanyResponseModel
 
 @{
     ViewBag.Title = "title";
 }
 
-<h2>title</h2>
+@using (Html.BeginForm("AddAirCompany", "AirCompany", FormMethod.Post, new {id="frmRegister"})) {
+
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+
+    @Html.ListBoxFor(m => m.AirLineIds, Model.Airlines, "Select AirLines for AirCompany")
+
+    <input type='Submit' value='Register' id= "btnRegister" />
+}
