@@ -125,3 +125,9 @@ C:\Users\sogho\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\Airlin
 C:\Users\sogho\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\AirlinesWay.Api.genruntimeconfig.cache
 C:\Users\sogho\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\ref\AirlinesWay.Api.dll
 C:\Users\sogho\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\AirlinesWay.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\obj\Debug\net6.0\AirlinesWay.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\gagik.vardanyan\RiderProjects\AirlinesWay\AirlinesWay.Api\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

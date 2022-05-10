@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 namespace AirlinesWay.Application.Models; 
 
 public class FlightRequestModel {
@@ -10,4 +12,6 @@ public class FlightRequestModel {
 
 	public int AirCompanyId { get; set; }
 	public int AirlineId { get; set; }
+
+	public IEnumerable<SelectListItem> AirCompanies { get; set; }
 }

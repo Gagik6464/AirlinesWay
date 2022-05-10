@@ -1,4 +1,3 @@
-using AirlinesWay.Domain;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AirlinesWay.Application.Models; 

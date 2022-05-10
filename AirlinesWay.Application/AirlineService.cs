@@ -15,16 +15,17 @@ public class AirlineService : IAirlineService
         _dbContext = dbContext;
     }
 
-    public async Task<IEnumerable<AirlineResponseModel>> GetAllFlights()
+    public async Task<IEnumerable<AirlineResponseModel>> GetAllAirLines()
     {
-        var airlines =  await _dbContext.Airlines.ToListAsync();
+        var airlines =  await _dbContext.Airlines.Include(x =>x.AirCompanies).ToListAsync();
         
         var response = airlines.Select(airline => new AirlineResponseModel
         {
             Id = airline.Id,
             Name = airline.Name,
             Distance = airline.Distance,
-            CurrentlyFlightCount = airline.Flights.Count
+            CurrentlyFlightCount = airline.Flights.Count,
+            AirCompanyIds = airline.AirCompanies.Select(x => x.Id)
         }).ToList();
         
         foreach (var item in response)

@@ -10,35 +10,24 @@ public class FlightsController : Controller {
     private readonly IAirCompanyService _airCompanyService;
     private readonly IAirlineService _airlineService;
 
-    public FlightsController(IFlightService flightService, IAirlineService airlineService) {
+    public FlightsController(IFlightService flightService, IAirlineService airlineService, IAirCompanyService airCompanyService) {
         _flightService = flightService;
         _airlineService = airlineService;
+        _airCompanyService = airCompanyService;
     }
 
     // GET
     public async Task<IActionResult> Index()
     {
-        var cities = await _airCompanyService.Get();
-        
-        var selectCitiesList = new List<SelectListItem>();
-        var selectAirLinesList = new List<SelectListItem>();
-        var response = new CitiesResponseModel();
-        
-        foreach (var city in cities)
+        var aircompanies = await _airCompanyService.GetAllAirCompanies();
+        var airLines = await _airlineService.GetAllAirLines();
+
+        var selectAirCompaniesList = aircompanies.Select(airCompany => new SelectListItem() {Text = airCompany.Name, Value = airCompany.Id.ToString()}).ToList();
+
+        return View(new FlightRequestModel()
         {
-            selectCitiesList.Add(new()
-            {
-                Text = city.Name,
-                Value = city.Id.ToString()
-            });
-        }
-        
-        return View(new AirLineRequestModel()
-        {
-            Cities = selectCitiesList
+            AirCompanies = selectAirCompaniesList
         });
-        
-        return View();
     }
 
     [HttpPost]

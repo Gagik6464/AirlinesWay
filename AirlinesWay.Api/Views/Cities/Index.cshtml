@@ -35,9 +35,7 @@
     })
         <text> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</text>
             <td>@Html.ActionLink("Please Add AirLines", "Index", "AirLine")</td>
-
-    <input type="button" value="Please Add AirLines" onclick="window.location.href='<@Url.Action("Index","AirLine") %>';" />
-    <input type="button" value="Please Add Flights" onclick="window.location.href='<@Url.Action("AddFlight","Flights") %>';" />
+            <td>@Html.ActionLink("Please Add Flights", "Index", "Flights")</td>
     </div>
 
     <button type="submit">Find</button>

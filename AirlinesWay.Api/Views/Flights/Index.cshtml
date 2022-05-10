@@ -1,7 +1,30 @@
-@model dynamic
+@model AirlinesWay.Application.Models.FlightRequestModel
 
 @{
     ViewBag.Title = "title flights";
 }
 
-<h2>title flights</h2>
+@using (Html.BeginForm("AddAirline", "AirLine", FormMethod.Post, new {id="frmRegister"})) {
+
+    @Html.DropDownListFor(m => m.AirCompanyId, Model.AirCompanies, "Select AirCompany")
+
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+
+    @Html.LabelFor(m => m.Code)
+    @Html.TextBoxFor(m => m.Code)
+
+    @Html.LabelFor(m => m.StartDateTime)
+    @Html.TextBoxFor(model => model.StartDateTime, new { type = "datetime" })
+    
+    @Html.LabelFor(m => m.ExpectedFinishDateTime)
+    @Html.TextBoxFor(model => model.ExpectedFinishDateTime, new { type = "datetime" })
+
+    @Html.LabelFor(m => m.TimeDuration)
+    @Html.TextBoxFor(m => m.TimeDuration)
+
+    @Html.LabelFor(m => m.Price)
+    @Html.TextBoxFor(m => m.Price)
+
+<input type='Submit' value='Register' id= "btnRegister" />
+}

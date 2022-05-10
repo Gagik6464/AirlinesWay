@@ -18,4 +18,5 @@ public class AirlineResponseModel
     public string AirCompanyName { get; set; }
 
     public int CurrentlyFlightCount { get; set; }
+    public IEnumerable<int> AirCompanyIds { get; set; }
 }
