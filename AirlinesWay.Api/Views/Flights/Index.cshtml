@@ -4,6 +4,8 @@
     ViewBag.Title = "title flights";
 }
 
+<h2>Add Flight</h2>
+
 @using (Html.BeginForm("AddFlight", "Flights", FormMethod.Post, new {id="frmRegister"})) {
 
     @Html.DropDownListFor(m => m.AirCompanyId, Model.AirCompanies, "Select AirCompany")
@@ -21,11 +23,8 @@
     @Html.LabelFor(m => m.StartDateTime)
     @Html.TextBoxFor(model => model.StartDateTime, new { type = "datetime" })
     
-    @Html.LabelFor(m => m.ExpectedFinishDateTime)
-    @Html.TextBoxFor(model => model.ExpectedFinishDateTime, new { type = "datetime" })
-
     @Html.LabelFor(m => m.TimeDuration)
-    @Html.TextBoxFor(m => m.TimeDuration)
+    @Html.TextBoxFor(model => model.TimeDuration)
 
     @Html.LabelFor(m => m.Price)
     @Html.TextBoxFor(m => m.Price)

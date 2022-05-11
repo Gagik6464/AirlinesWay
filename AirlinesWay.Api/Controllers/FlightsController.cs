@@ -44,7 +44,9 @@ public class FlightsController : Controller {
     }
     
     [HttpPost("AddFLight")]
-    public async Task<IActionResult> AddFlight(FlightRequestModel request) {
+    public async Task<IActionResult> AddFlight(FlightRequestModel request)
+    {
+        request.ExpectedFinishDateTime = request.StartDateTime.Add(request.TimeDuration);
         var response = await _flightService.AddFlight(request);
         return Ok(response);
     }

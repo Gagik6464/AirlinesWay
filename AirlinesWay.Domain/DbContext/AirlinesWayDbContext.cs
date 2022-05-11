@@ -4,12 +4,9 @@ namespace AirlinesWay.Domain.DbContext;
 
 public class AirlinesWayDbContext : Microsoft.EntityFrameworkCore.DbContext
 {
-    public AirlinesWayDbContext()
-    { }
-    
     public AirlinesWayDbContext(DbContextOptions<AirlinesWayDbContext> options) : base(options)
     { }
-    
+
     public DbSet<AirCompany> AirCompanies { get; set; }
     public DbSet<Airline> Airlines { get; set; }
     public DbSet<City> Cities { get; set; }
@@ -58,5 +55,10 @@ public class AirlinesWayDbContext : Microsoft.EntityFrameworkCore.DbContext
             .WithMany(y => y.AirCompanies);
         });
             
+    }
+    
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+       // You don't actually ever need to call this
     }
 }

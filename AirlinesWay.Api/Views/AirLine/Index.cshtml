@@ -4,6 +4,8 @@
     ViewBag.Title = "title";
 }
 
+<h2>Add AirLine</h2>
+
 @using (Html.BeginForm("AddAirline", "AirLine", FormMethod.Post, new {id="frmRegister"})) {
 
     @Html.LabelFor(m => m.Name)

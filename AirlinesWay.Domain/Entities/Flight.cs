@@ -3,7 +3,7 @@
 public class Flight
 {
     public Flight(string name, string code, DateTime startDateTime, DateTime expectedFinishDateTime, decimal price,
-        int airlineId, DateTime timeDuration, int airCompanyId)
+        int airlineId, TimeSpan timeDuration, int airCompanyId)
     {
         Name = name;
         Code = code;
@@ -20,7 +20,7 @@ public class Flight
     public string Code { get; set; }
     public DateTime StartDateTime { get; set; }
     public DateTime ExpectedFinishDateTime { get; set; }
-    public DateTime TimeDuration { get; set; }
+    public TimeSpan TimeDuration { get; set; }
     public decimal Price { get; set; }
 
     public int AirCompanyId { get; set; }

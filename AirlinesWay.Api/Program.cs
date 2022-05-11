@@ -11,32 +11,30 @@ builder.Services.AddRazorPages();
 
 var connectionString = builder.Configuration.GetConnectionString("AirlinesWay");
 
-builder.Services.AddDbContext<AirlinesWayDbContext>(options =>
-    options.UseSqlServer(connectionString));
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>(); 
+builder.Services.AddDbContext<AirlinesWayDbContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddScoped<IAirlineService, AirlineService>();
 builder.Services.AddScoped<IFlightService, FlightService>();
 builder.Services.AddScoped<IAirCompanyService, AirCompanyService>();
 builder.Services.AddScoped<ICityService, CitiesService>();
 
-builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>(); 
-
 var app = builder.Build();
 
-using (var serviceProvider = builder.Services.BuildServiceProvider())
-{
-    try
-    {
-        var context = serviceProvider.GetRequiredService<AirlinesWayDbContext>();
-        DbInitializer.Initialize(context);
-    }
-    catch (Exception ex)
-    {
-        var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "An error occurred creating the DB");
-    }
-    
-}
+// using (var serviceProvider = builder.Services.BuildServiceProvider())
+// {
+//     try
+//     {
+//         var context = serviceProvider.GetRequiredService<AirlinesWayDbContext>();
+//         DbInitializer.Initialize(context);
+//     }
+//     catch (Exception ex)
+//     {
+//         var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
+//         logger.LogError(ex, "An error occurred creating the DB");
+//     }
+//     
+// }
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
