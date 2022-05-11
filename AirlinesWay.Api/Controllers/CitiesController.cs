@@ -37,24 +37,6 @@ public class CitiesController : Controller
         return View(response);
     }
 
-    // [HttpGet]
-    // public async Task<IActionResult> GetAllCities() {
-    //     var citiesResponse = await _cityService.GetAllCities();
-    //
-    //     var response = new List<SelectListItem>();
-    //     
-    //     foreach (var city in citiesResponse)
-    //     {
-    //         response.Add(new()
-    //         {
-    //             Text = city.Name,
-    //             Value = city.Id.ToString()
-    //         });
-    //     }
-    //
-    //     return Ok(response);
-    // }
-
     [HttpPost("AddCity")]
     public async Task<IActionResult> AddCity(string cityName, int countryId)
     {

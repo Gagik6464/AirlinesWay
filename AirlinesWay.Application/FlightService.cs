@@ -118,9 +118,20 @@ public class FlightService : IFlightService
 
         var requestedAirline = new Flight(request.Name, request.Code,request.StartDateTime, request.ExpectedFinishDateTime,
             request.Price, request.AirlineId, request.TimeDuration, request.AirCompanyId) ;
+        
+        return await _dbContext.Database.ExecuteSqlRawAsync("sp_InsertFlightInfo @p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7", 
+            request.Name, 
+            request.Code,
+            request.StartDateTime,
+            request.ExpectedFinishDateTime,
+            request.TimeDuration,
+            request.Price,
+            request.AirCompanyId,
+            request.AirlineId
+        ) > 0;
 
-        await _dbContext.Flights.AddAsync(requestedAirline);
-
-        return await _dbContext.SaveChangesAsync() > 0;
+        // await _dbContext.Flights.AddAsync(requestedAirline);
+        //
+        // return await _dbContext.SaveChangesAsync() > 0;
     }
 }
