@@ -21,20 +21,20 @@ builder.Services.AddScoped<ICityService, CitiesService>();
 
 var app = builder.Build();
 
-// using (var serviceProvider = builder.Services.BuildServiceProvider())
-// {
-//     try
-//     {
-//         var context = serviceProvider.GetRequiredService<AirlinesWayDbContext>();
-//         DbInitializer.Initialize(context);
-//     }
-//     catch (Exception ex)
-//     {
-//         var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
-//         logger.LogError(ex, "An error occurred creating the DB");
-//     }
-//     
-// }
+using (var serviceProvider = builder.Services.BuildServiceProvider())
+{
+    try
+    {
+        var context = serviceProvider.GetRequiredService<AirlinesWayDbContext>();
+        DbInitializer.Initialize(context);
+    }
+    catch (Exception ex)
+    {
+        var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "An error occurred creating the DB");
+    }
+    
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
